@@ -1,11 +1,11 @@
 
-#Steps
+# Steps
 
-##Updating Time 
+## Updating Time 
 
 `sudo date -s "$(wget --method=HEAD -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f2-7)"`
 
-##Installing Kernel
+## Installing Kernel
 ''' wget -qO - https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \
     | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/linux-surface.gpg '''
 
@@ -19,7 +19,7 @@
 `sudo update-grub`
 `sudo reboot`
 
-##Installing Touch
+## Installing Touch
 
 `sudo apt install git dkms build-essential`
 `git clone https://github.com/quo/ithc-linux.git`
